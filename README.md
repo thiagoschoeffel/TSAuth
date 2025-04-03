@@ -1,5 +1,9 @@
 # TSAuth
 
+[![.NET](https://img.shields.io/badge/.NET-9.0-blue)](https://dotnet.microsoft.com/)
+[![Docker](https://img.shields.io/badge/docker-ready-blue)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 TSAuth é um microserviço de autenticação com 
 geração de JWT e refresh token, desenvolvido 
 em .NET 9, com persistência em PostgreSQL. 
