@@ -95,8 +95,8 @@ Endpoints disponíveis:
 
 ## 🔐 Admin padrão (definido via appsettings)
 
-- **Email:** `admin@admin.com`
-- **Senha:** `##adm!@123`
+- **Email:** `Definido no appsettings.json`
+- **Senha:** `Definido no appsettings.json`
 
 ---
 
