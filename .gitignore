@@ -1,0 +1,24 @@
+# Build
+bin/
+obj/
+out/
+
+# User files
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# VSCode
+.vscode/
+
+# Secrets/configs
+appsettings.Development.json
+appsettings.Local.json
+
+# Logs
+*.log
+
+# Others
+.env
