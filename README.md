@@ -34,6 +34,7 @@ TSAuth/
 │   ├── Models/
 │   ├── Infrastructure/
 │   ├── Configurations/
+│   ├── Dockerfile
 │   └── appsettings.Template.json
 ├── docker-compose.yml
 ├── README.md
