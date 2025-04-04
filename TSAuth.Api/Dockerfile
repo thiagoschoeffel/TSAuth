@@ -1,4 +1,5 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+﻿# Etapa 1: build com SDK 9.0
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
 
 COPY *.sln ./
@@ -9,6 +10,7 @@ COPY . ./
 WORKDIR /app/TSAuth.Api
 RUN dotnet publish -c Release -o out
 
+# Etapa 2: runtime com ASP.NET 9.0
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
 WORKDIR /app
 COPY --from=build /app/TSAuth.Api/out .
