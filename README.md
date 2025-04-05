@@ -6,7 +6,7 @@
 
 TSAuth é um microserviço de autenticação com 
 geração de JWT e refresh token, desenvolvido 
-em .NET 9, com persistência em PostgreSQL. 
+em .NET 9, com persistência em SQLServer. 
 Ele expõe rotas para login e renovação de 
 token e está preparado para integração com outros 
 microserviços.
@@ -17,7 +17,7 @@ microserviços.
 
 - .NET 9
 - ASP.NET Core Web API
-- PostgreSQL (via Docker)
+- SQLServer
 - Entity Framework Core
 - JWT Bearer Authentication
 - Swagger UI
@@ -29,13 +29,16 @@ microserviços.
 ```plaintext
 TSAuth/
 ├── TSAuth.Api/
-│   ├── Controllers/
 │   ├── Application/
-│   ├── Models/
-│   ├── Infrastructure/
 │   ├── Configurations/
-│   ├── Dockerfile
-│   └── appsettings.Template.json
+│   ├── Contracts/
+│   ├── Controllers/
+│   ├── Infrastructure/
+│   ├── Migrations/
+│   ├── Models/
+│   ├── appsetting/s.Template.json
+│   └── Program.cs
+├── Dockerfile
 ├── docker-compose.yml
 ├── README.md
 └── .gitignore
