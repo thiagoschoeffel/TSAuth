@@ -7,15 +7,10 @@ using TSAuth.Api.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("Postgres") ??
+var connectionString = builder.Configuration.GetConnectionString("SqlServer") ??
                        throw new InvalidOperationException("Connection string not found");
 
-builder.Services.AddDbContext<TsAuthDbContext>(options =>
-    options
-        .UseNpgsql(connectionString,
-            npgsqlOptions => { npgsqlOptions.MigrationsHistoryTable("ef_migrations_history", schema: "public"); })
-        .UseSnakeCaseNamingConvention()
-);
+builder.Services.AddDbContext<TsAuthDbContext>(options => options.UseSqlServer(connectionString));
 
 var adminSection = builder.Configuration.GetSection("AdministratorUser");
 builder.Services.Configure<AdministratorUserSettings>(adminSection);
